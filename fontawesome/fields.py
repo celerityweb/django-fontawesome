@@ -19,8 +19,9 @@ class IconField(models.Field):
         return 'CharField'
 
     def from_db_value(self, value, expression, connection, context):
-        if value is None:
-            return value
+        if not value:
+            return None
+
         return Icon(id=value)
 
     def to_python(self, value):
