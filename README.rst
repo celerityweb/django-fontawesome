@@ -21,7 +21,7 @@ Requirements
 ============
 
 - PyYAML
-- Select2 (included)
+- Select2
 - JQuery (uses django's jquery in admin panel)
 
 
@@ -55,7 +55,7 @@ Installation / Usage
     )
 
 2. Import and use the ``IconField``::
-    
+
     from fontawesome.fields import IconField
 
 
@@ -69,7 +69,7 @@ Here's what the widget looks like in the admin panel:
 |admin-widget|
 
 3. You can then render the icon in your template like this::
-    
+
     {% for category in categories.all %}
         {% if category.icon %}
             {{ category.icon.as_html }}
@@ -85,16 +85,16 @@ Here's what the widget looks like in the admin panel:
     - example usage::
 
          {% load fontawesome %}
-      
+
          <head>
-           {% fontawesome_stylesheet %} 
+           {% fontawesome_stylesheet %}
            ...
          </head>
-       
+
          {% fontawesome_icon 'user' color='red' %}
 
          {% fontawesome_icon 'star' large=True spin=True %}
-      
+
          <ul class="fa-ul">
             <li> {% fontawesome_icon 'home' rotate=90 li=True %} One</li>
          </ul>

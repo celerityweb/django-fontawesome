@@ -42,14 +42,11 @@ class IconWidget(forms.Select):
     class Media:
 
         js = (
-            'fontawesome/js/django_fontawesome.js',
-            'fontawesome/select2/select2.min.js'
+            'fontawesome/js/django_fontawesome.js'
         )
 
         css = {
             'all': (
-                getattr(settings, 'FONTAWESOME_CSS_URL', 'fontawesome/css/font-awesome.min.css'),
-                'fontawesome/select2/select2.css',
-                'fontawesome/select2/select2-bootstrap.css'
+                getattr(settings, 'FONTAWESOME_CSS_URL', 'fontawesome/css/font-awesome.min.css')
             )
         }
